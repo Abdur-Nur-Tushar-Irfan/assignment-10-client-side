@@ -1,12 +1,16 @@
 import { createBrowserRouter } from "react-router-dom";
+import AllCourses from "../components/AllCourses/AllCourses";
 import Blog from "../components/Blog/Blog";
-import Courses from "../components/Courses/Courses";
-import Home from "../components/Home/Home";
+
+
 import Login from "../components/Login/Login";
 import Register from "../components/Register/Register";
+import Courses from "../Courses/Courses";
+
 import ErrorPage from "../Errorpage/ErrorPage";
+import Home from "../Home/Home";
 import Main from "../Main/Main";
-import PrivateRoute from "../PrivateRoute/PrivateRoute";
+
 
 export const routes=createBrowserRouter([
     {
@@ -23,10 +27,7 @@ export const routes=createBrowserRouter([
                 path:'/home',
                 element:<Home></Home>
             },
-            {
-                path:'/courses',
-                element:<PrivateRoute><Courses></Courses></PrivateRoute>
-            },
+          
             {
                 path:'/blog',
                 element:<Blog></Blog>
@@ -41,6 +42,12 @@ export const routes=createBrowserRouter([
             },
 
         ]
+    },
+    {
+        path:'courses',
+        element:<Courses></Courses>
     }
+  
+
 
 ])

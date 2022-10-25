@@ -20,7 +20,7 @@ const Header = () => {
         <div>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container>
-                 <Navbar.Brand href="#home"><FaUserGraduate className='text-white me-3 '></FaUserGraduate> Educate and Online Course</Navbar.Brand>
+                    <Navbar.Brand href="#home"><FaUserGraduate className='text-white me-3 '></FaUserGraduate> Educate and Online Course</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto mx-auto">
@@ -42,8 +42,8 @@ const Header = () => {
 
                                             <Link onClick={handleLogOut} to='/login' className='text-white align-center me-2 text-decoration-none'>Log out</Link>
                                             <span className='text-white'>{user.displayName}</span>
-                                            <Image 
-                                                
+                                            <Image
+
                                                 roundedCircle
                                                 className='ms-3'
                                                 src={user?.photoURL}
