@@ -8,7 +8,7 @@ const CourseDetails = () => {
     console.log(details)
     
     return (
-        <div>
+        <div >
        
         {
             details.map(element=><CourseCard 

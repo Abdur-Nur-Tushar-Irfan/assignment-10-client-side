@@ -41,7 +41,7 @@ const Header = () => {
                                         <>
 
                                             <Link onClick={handleLogOut} to='/login' className='text-white align-center me-2 text-decoration-none'>Log out</Link>
-                                            <span className='text-white'>{user.displayName}</span>
+                                            <span className='text-white'>{user?.displayName}</span>
                                             <Image
 
                                                 roundedCircle
