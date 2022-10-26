@@ -1,18 +1,24 @@
 # Getting Started Educate and online course
 
-Live Server[Click here](https://github.com/facebook/create-react-app).
+Live Server[Click here](https://educational-website-695a3.web.app/).
 
-## Available Scripts
+## Project Feature
 
-In the project directory, you can run:
+- react js
+- react Bootstrap
+- react icon
+- firebase authentication
+- react router
+- node js,express js
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Project scope
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Firstly there are six courses in my project..then 
+if you click individual project you can purchase this project
+and also get free pdf..This projects i use authentication..you cant
+purchase without log in..after login you can go through checkout page and purchase
+courses..that's all about my project
 
 ### `npm test`
 
@@ -49,22 +55,5 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
