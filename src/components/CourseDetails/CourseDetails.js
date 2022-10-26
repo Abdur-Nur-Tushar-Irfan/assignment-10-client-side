@@ -9,7 +9,7 @@ const CourseDetails = () => {
     
     return (
         <div>
-        <h2>this is course CourseDetails{details.length}</h2>
+       
         {
             details.map(element=><CourseCard 
                 key={element._id}
