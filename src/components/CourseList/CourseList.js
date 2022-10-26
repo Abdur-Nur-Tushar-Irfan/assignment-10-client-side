@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const CourseList = () => {
     const [data,setData]=useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/courses')
+        fetch('https://educational-website-server-abdur-nur-tushar-irfan.vercel.app/courses')
         .then(res=>res.json())
         .then(data=>setData(data))
     },[])

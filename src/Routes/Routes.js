@@ -63,13 +63,13 @@ export const routes=createBrowserRouter([
         children:[
             {
                 path:'/courses',
-                loader: () => fetch('http://localhost:5000/allCourses'),
+                loader: () => fetch('https://educational-website-server-abdur-nur-tushar-irfan.vercel.app/allCourses'),
                 element:<AllCourses></AllCourses>
             },
             
                 {
                     path:'/courses/:id',
-                    loader: ({params})=>fetch (`http://localhost:5000/category/${params.id}`),
+                    loader: ({params})=>fetch (`https://educational-website-server-abdur-nur-tushar-irfan.vercel.app/category/${params.id}`),
                     element:<CourseDetails></CourseDetails>
                     
                 },
