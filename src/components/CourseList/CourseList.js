@@ -9,7 +9,7 @@ const CourseList = () => {
         .then(data=>setData(data))
     },[])
     return (
-        <div className='ms-4 border p-4 bg-dark'>
+        <div className=' border p-4 bg-dark'>
             <h5 className='text-white'>Explore our course list</h5>
             {
                 data.map(element=><p

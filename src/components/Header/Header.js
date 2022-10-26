@@ -41,9 +41,9 @@ const Header = () => {
                                         <>
 
                                             <Link onClick={handleLogOut} to='/login' className='text-white align-center me-2 text-decoration-none'>Log out</Link>
-                                            <span className='text-white'>{user?.displayName}</span>
+                                            <span className='text-white '>{user?.displayName}</span>
                                             <Image
-
+                                            data-bs-toggle="tooltip" data-bs-placement="top" title={user?.displayName}
                                                 roundedCircle
                                                 className='ms-3'
                                                 src={user?.photoURL}
@@ -52,6 +52,7 @@ const Header = () => {
                                             >
 
                                             </Image>
+                                            
 
                                         </>
 

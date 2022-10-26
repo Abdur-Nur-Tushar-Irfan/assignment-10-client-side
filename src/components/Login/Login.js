@@ -62,7 +62,8 @@ const Login = () => {
     return (
         <div>
 
-            <Card className='mx-auto mt-5' style={{ width: '18rem' }}>
+            <Card className='mx-auto mt-5 shadow p-3 mb-5 bg-white rounded ' style={{ width: '18rem' }}>
+                
                 <Form onSubmit={handleSubmit} className='p-4'>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>

@@ -8,7 +8,7 @@ const ForAllCourse = ({ course }) => {
     return (
         <div>
             
-                <Card >
+                <Card className='bg-dark text-white' >
                     <Card.Img variant="top" src={image_url} />
                     <Card.Body>
                         <Card.Title>{title}</Card.Title>

@@ -11,7 +11,7 @@ const CourseCard = ({ element }) => {
     return (
         <div>
           
-            <Card className='m-2'>
+            <Card className='m-4 bg-dark text-white'>
             <Link> <button type="button" class="btn btn-outline-primary w-100">Download pdf <FaDownload></FaDownload></button></Link>
                
                 <Card.Img variant="top" src={image_url} />

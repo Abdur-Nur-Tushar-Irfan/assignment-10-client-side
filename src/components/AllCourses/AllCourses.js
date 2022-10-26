@@ -13,7 +13,7 @@ const AllCourses = () => {
 
 
     return (
-        <div className=" row-cols-1 row-cols-lg-2 g-4 row mt-3">
+        <div className=" row-cols-1 row-cols-lg-2 g-4 row mt-3 me-3 ">
             
                 
                     {
