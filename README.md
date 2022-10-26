@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Getting Started Educate and online course
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live Server[Click here](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
