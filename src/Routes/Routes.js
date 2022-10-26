@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import AllCourses from "../components/AllCourses/AllCourses";
 import Blog from "../components/Blog/Blog";
+import CheckOut from "../components/CheckOut/CheckOut";
+import CourseDetails from "../components/CourseDetails/CourseDetails";
 
 
 import Login from "../components/Login/Login";
@@ -10,6 +12,7 @@ import Courses from "../Courses/Courses";
 import ErrorPage from "../Errorpage/ErrorPage";
 import Home from "../Home/Home";
 import Main from "../Main/Main";
+import PrivateRoute from '../PrivateRoute/PrivateRoute'
 
 
 export const routes=createBrowserRouter([
@@ -23,6 +26,7 @@ export const routes=createBrowserRouter([
                 path:'/',
                 element:<Home></Home>
             },
+           
             {
                 path:'/home',
                 element:<Home></Home>
@@ -40,13 +44,35 @@ export const routes=createBrowserRouter([
                 path:'/register',
                 element:<Register></Register>
             },
+            {
+                path:'/courseCheckout',
+                element:<PrivateRoute><CheckOut></CheckOut></PrivateRoute>
+            }
 
         ]
     },
     {
-        path:'courses',
-        element:<Courses></Courses>
+        path:"/courses",
+        element:<Courses></Courses>,
+        children:[
+            {
+                path:'/courses',
+                loader: () => fetch('http://localhost:5000/allCourses'),
+                element:<AllCourses></AllCourses>
+            },
+            
+                {
+                    path:'/courses/:id',
+                    loader: ({params})=>fetch (`http://localhost:5000/category/${params.id}`),
+                    element:<CourseDetails></CourseDetails>
+                    
+                },
+               
+                
+               
+        ]
     }
+    
   
 
 

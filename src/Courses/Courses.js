@@ -6,9 +6,11 @@ import CourseList from '../components/CourseList/CourseList';
 import Header from '../components/Header/Header';
 
 const Courses = () => {
+   
     return (
         <div>
-            <Header></Header>
+          
+           <Header></Header>
             
                 <Row>
                 <Col className='mt-5 ' sm={4}>
@@ -17,9 +19,8 @@ const Courses = () => {
                         
                         </Col>
                     <Col sm={8}>
-                        this is for all courses
-                        <AllCourses></AllCourses>
-                        
+                       
+                       <Outlet></Outlet> 
                         
                         
                         </Col>
