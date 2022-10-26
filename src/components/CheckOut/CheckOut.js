@@ -12,7 +12,7 @@ const CheckOut = () => {
     }
     return (
         <div>
-            <Card className='mx-auto mt-5' style={{ width: '18rem' }}>
+            <Card className='mx-auto mt-5 bg-dark text-white' style={{ width: '18rem' }}>
                 <Form className='p-4'>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Your Name</Form.Label>
@@ -36,7 +36,7 @@ const CheckOut = () => {
                         <Form.Check type="checkbox" label="Check me out" />
                     </Form.Group>
 
-                    <Button variant="primary" onClick={handleCheckOut} type="submit">
+                    <Button className='w-100' variant="primary" onClick={handleCheckOut} type="submit">
                         Check Out Your Order
                     </Button>
                     

@@ -3,6 +3,7 @@ import AllCourses from "../components/AllCourses/AllCourses";
 import Blog from "../components/Blog/Blog";
 import CheckOut from "../components/CheckOut/CheckOut";
 import CourseDetails from "../components/CourseDetails/CourseDetails";
+import Faq from "../components/Faq/Faq";
 
 
 import Login from "../components/Login/Login";
@@ -43,6 +44,11 @@ export const routes=createBrowserRouter([
             {
                 path:'/register',
                 element:<Register></Register>
+            },
+            {
+                path:'/faq',
+                element:<Faq></Faq>
+
             },
             {
                 path:'/courseCheckout',

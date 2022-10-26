@@ -18,6 +18,7 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user)
+                navigate(from, { replace: true })
             })
             .catch(error => {
                 console.error(error)
@@ -62,9 +63,9 @@ const Login = () => {
     return (
         <div>
 
-            <Card className='mx-auto mt-5 shadow p-3 mb-5 bg-white rounded ' style={{ width: '18rem' }}>
+            <Card className='mx-auto mt-5 shadow p-3 mb-5 bg-black rounded ' style={{ width: '18rem' }}>
                 
-                <Form onSubmit={handleSubmit} className='p-4'>
+                <Form onSubmit={handleSubmit} className='p-4 bg-black text-white'>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
                         <Form.Control type="email" name='email' placeholder="Enter email" required />
@@ -87,9 +88,9 @@ const Login = () => {
                         Log in
                     </Button>
                     <div className='mt-3 text-center'>
-                        <Link> <FaGoogle className='me-3' onClick={handleGoogleSignIn}></FaGoogle></Link>
-                        <Link onClick={handleGitHub}> <FaGithub></FaGithub></Link>
-
+                       <div className='border p-2 mb-1 text-white'  onClick={handleGoogleSignIn}><Link> <FaGoogle className='me-3 text-white'></FaGoogle></Link>Google</div>
+                       <div className='border  p-2 text-white'> <Link className='me-3 text-white' onClick={handleGitHub}><FaGithub></FaGithub></Link> GitHub
+</div>
                     </div>
                 </Form>
 

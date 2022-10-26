@@ -41,7 +41,7 @@ const Register = () => {
     }
     return (
         <div>
-            <Card className='mx-auto mt-5' style={{ width: '18rem' }}>
+            <Card className='mx-auto mt-5 bg-dark text-white' style={{ width: '18rem' }}>
                 <Form onSubmit={handleSubmit} className='p-4'>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Full name</Form.Label>
