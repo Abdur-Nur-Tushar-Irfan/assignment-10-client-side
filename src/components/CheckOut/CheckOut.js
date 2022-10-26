@@ -3,7 +3,6 @@ import { Card } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import toast from 'react-hot-toast';
-import { FaGoogle } from 'react-icons/fa';
 import { AuthContext } from '../../UserContext/UserContext';
 
 const CheckOut = () => {
