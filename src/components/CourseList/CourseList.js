@@ -11,10 +11,11 @@ const CourseList = () => {
     return (
         <div className=' border p-4 bg-dark'>
             <h5 className='text-white'>Explore our course list</h5>
+            <hr className='text-white'></hr>
             {
                 data.map(element=><p
                 key={element.id}> 
-                <Link className='text-decoration-none' to={`/courses/${element.id}`}>{element.name}</Link>
+                <Link className='text-decoration-none text-white' to={`/courses/${element.id}`}>{element.name}</Link>
                 
                 </p>)
             }
