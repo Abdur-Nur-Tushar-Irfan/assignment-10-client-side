@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Card } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import toast from 'react-hot-toast';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../UserContext/UserContext';
@@ -19,6 +20,7 @@ const Login = () => {
                 const user = result.user;
                 console.log(user)
                 navigate(from, { replace: true })
+                toast.success('successfully login')
             })
             .catch(error => {
                 console.error(error)
@@ -53,6 +55,7 @@ const Login = () => {
                 setError('');
                 console.log(user)
                 navigate(from, { replace: true })
+                toast.success('successfully login')
 
             })
             .catch(error => {
@@ -87,9 +90,10 @@ const Login = () => {
                     <Button variant="primary" type="submit">
                         Log in
                     </Button>
+                    <hr className='text-white'></hr>
                     <div className='mt-3 text-center'>
-                       <div className='border p-2 mb-1 text-white'  onClick={handleGoogleSignIn}><Link> <FaGoogle className='me-3 text-white'></FaGoogle></Link>Google</div>
-                       <div className='border  p-2 text-white'> <Link className='me-3 text-white' onClick={handleGitHub}><FaGithub></FaGithub></Link> GitHub
+                       <div className='border p-2 mb-1 text-white'  onClick={handleGoogleSignIn}><FaGoogle></FaGoogle> Google</div>
+                       <div className='text-white border  p-2 text-white' onClick={handleGitHub}><FaGithub></FaGithub> GitHub
 </div>
                     </div>
                 </Form>
