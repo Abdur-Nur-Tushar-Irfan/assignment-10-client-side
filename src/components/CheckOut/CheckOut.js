@@ -11,7 +11,7 @@ const CheckOut = () => {
         toast.success('Your Order place succefully')
     }
     return (
-        <div>
+        <div className='mb-3'>
             <Card className='mx-auto mt-5 bg-dark text-white' style={{ width: '18rem' }}>
                 <Form className='p-4'>
                     <Form.Group className="mb-3" controlId="formBasicEmail">

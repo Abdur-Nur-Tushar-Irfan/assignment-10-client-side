@@ -92,9 +92,8 @@ const Login = () => {
                     </Button>
                     <hr className='text-white'></hr>
                     <div className='mt-3 text-center'>
-                       <div className='border p-2 mb-1 text-white'  onClick={handleGoogleSignIn}><FaGoogle></FaGoogle> Google</div>
-                       <div className='text-white border  p-2 text-white' onClick={handleGitHub}><FaGithub></FaGithub> GitHub
-</div>
+                       <Link className='text-decoration-none'><div className='border p-2 mb-1 text-white'  onClick={handleGoogleSignIn}><FaGoogle></FaGoogle> Google</div></Link>
+                       <Link className='text-decoration-none'><div className='text-white border  p-2 text-white' onClick={handleGitHub}><FaGithub></FaGithub> GitHub</div></Link>
                     </div>
                 </Form>
 

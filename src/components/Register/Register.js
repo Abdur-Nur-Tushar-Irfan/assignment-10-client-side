@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Card } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../UserContext/UserContext';
 
@@ -31,6 +32,7 @@ const Register = () => {
             setError('');
             console.log(user)
             handleUpdateUserProfile(name, photoURL)
+            toast.success('Register successfully you can login')
             
         })
         .catch(error=>{

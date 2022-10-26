@@ -3,6 +3,7 @@ import { Col, Row } from 'react-bootstrap';
 import { Outlet } from 'react-router-dom';
 import AllCourses from '../components/AllCourses/AllCourses';
 import CourseList from '../components/CourseList/CourseList';
+import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
 
 const Courses = () => {
@@ -12,7 +13,7 @@ const Courses = () => {
           
            <Header></Header>
             
-                <Row>
+                <Row className='mb-2'>
                 <Col className='mt-5 ' sm={4}>
                         
                         <CourseList></CourseList>
@@ -26,6 +27,7 @@ const Courses = () => {
                         </Col>
                    
                 </Row>
+                <Footer></Footer>
                 
             
 

@@ -11,7 +11,7 @@ const CourseCard = ({ element }) => {
     console.log(element)
     const { image_url, title, details } = element
     return (
-        <div>
+        <div className='mb-2'>
 
             <Card className='m-4 bg-dark text-white'>
             
