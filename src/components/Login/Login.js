@@ -2,49 +2,62 @@ import React, { useContext, useState } from 'react';
 import { Card } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import {  FaGithub, FaGoogle } from 'react-icons/fa';
+import { FaGithub, FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../UserContext/UserContext';
 
 const Login = () => {
-    const {signIn,signInWithGoogle}=useContext(AuthContext)
-    const [error,setError]=useState('')
-    const navigate=useNavigate();
-    const location=useLocation();
-    const from=location.state?.from?.pathname || '/';
-
-    const handleGoogleSignIn=()=>{
+    const { signIn, signInWithGoogle, signInWithitHub } = useContext(AuthContext)
+    const [error, setError] = useState('')
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
+    //handle sign in
+    const handleGoogleSignIn = () => {
         signInWithGoogle()
-        .then(result=>{
-            const user=result.user;
-            console.log(user)
-        })
-        .catch(error=>{
-            console.error(error)
-        })
+            .then(result => {
+                const user = result.user;
+                console.log(user)
+            })
+            .catch(error => {
+                console.error(error)
+            })
 
     }
-    
-    const handleSubmit=(event)=>{
+    //handle github
+
+    const handleGitHub = () => {
+        signInWithitHub()
+            .then((result) => {
+               const user = result.user;
+               navigate(from, { replace: true })
+              
+            }).catch((error) => {
+                console.error(error)
+            });
+
+    }
+
+    const handleSubmit = (event) => {
         event.preventDefault();
-        const form=event.target;
-        const email=form.email.value;
-        const password=form.password.value;
-        console.log(email,password)
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email, password)
         form.reset()
-        signIn(email,password)
-        
-        .then(result=>{
-            const user=result.user;
-            setError('');
-            console.log(user)
-            navigate(from,{replace:true})
-           
-        })
-        .catch(error=>{
-            console.error(error)
-            setError(error.message)
-        })
+        signIn(email, password)
+
+            .then(result => {
+                const user = result.user;
+                setError('');
+                console.log(user)
+                navigate(from, { replace: true })
+
+            })
+            .catch(error => {
+                console.error(error)
+                setError(error.message)
+            })
     }
     return (
         <div>
@@ -62,7 +75,7 @@ const Login = () => {
                         <Form.Control type="password" name='password' placeholder="Password" required />
                     </Form.Group>
                     <p className='text-danger'>{error}</p>
-                   
+
                     <p>already register? <Link to='/register'>Register</Link></p>
 
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
@@ -74,11 +87,11 @@ const Login = () => {
                     </Button>
                     <div className='mt-3 text-center'>
                         <Link> <FaGoogle className='me-3' onClick={handleGoogleSignIn}></FaGoogle></Link>
-                        <Link> <FaGithub></FaGithub></Link>
+                        <Link onClick={handleGitHub}> <FaGithub></FaGithub></Link>
 
                     </div>
                 </Form>
-                
+
 
 
 
